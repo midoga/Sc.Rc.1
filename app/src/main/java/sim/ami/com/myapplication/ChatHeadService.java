@@ -728,15 +728,16 @@ public class ChatHeadService extends Service implements ShakeDetector.Listener {
 
             if (mConfig.isEnableRecordAudio()) {
                 mMediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
-                mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+                mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
                 mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
                 mMediaRecorder.setVideoFrameRate(FRAME_RATE);
 
                 mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
                 mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-                mMediaRecorder.setAudioEncodingBitRate(96 * 1024);
-                mMediaRecorder.setAudioChannels(2);
-                mMediaRecorder.setAudioSamplingRate(44100);
+              //  mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+              //  mMediaRecorder.setAudioEncodingBitRate(96 * 1024);
+               // mMediaRecorder.setAudioChannels(2);
+               // mMediaRecorder.setAudioSamplingRate(44100);
             } else {
                 mMediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
                 mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
